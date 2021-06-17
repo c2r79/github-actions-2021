@@ -17,3 +17,13 @@ jobs:
         run: |
           import platform
           print(platform.processor())
+
+
+  run-windows-bash:
+    runs-on: windows-latest
+    steps:
+      - name: Power shell current directory output
+        run: Get-Location
+      - name: Bash shell current directory output
+        shell: bash
+        run: pwd
