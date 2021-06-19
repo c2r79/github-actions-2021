@@ -16,8 +16,9 @@ jobs:
   checkout-action:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout latest master
+      - name: Checkout latest master
         uses: actions/checkout@v1.1
+      - name: Then list out the current directory
         run: |
           pwd
           ls -a
