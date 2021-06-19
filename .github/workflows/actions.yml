@@ -12,4 +12,4 @@ jobs:
         with:
           who-to-greet: Nunya Bidness
       - name: Console log greeting time
-        run: echo "${{ steps.losGreet.outputs.time}}""
+        run: echo "${{ steps.losGreet.outputs.time }}"
