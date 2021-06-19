@@ -18,7 +18,13 @@ jobs:
     steps:
       - name: Checkout latest master
         uses: actions/checkout@v2.3.4
-      - name: Then list out the current directory
+      - name: Accessing GITHUB ENVIRONMENT VARIABLES
         run: |
-          pwd
-          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+      - name: Accessing the GITHUB OBJECT
+        run: |
+          echo "${{github.token}}"
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
