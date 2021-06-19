@@ -13,3 +13,11 @@ jobs:
           who-to-greet: Nunya Bidness
       - name: Console log greeting time
         run: echo "${{ steps.losGreet.outputs.time }}"
+  checkout-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout latest master
+        uses: actions/checkout@v1.1
+        run: |
+          pwd
+          ls -a
