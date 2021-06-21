@@ -1,6 +1,9 @@
 name: Actions workflow
 
-on: [push]
+# on: [push]
+on:
+  repository_dispatch:
+    types: [Manual trigger]
 
 jobs:
   run-existing-action:
